@@ -4,6 +4,7 @@ import { NextFunction, Request, Response } from "express";
 import { IUser } from "../types/user.types";
 import { LoginDTO, RegisterDTO } from "../dtos/auth.dto";
 import { AuthService } from "../services/auth.service";
+import { CreateBlogDto } from "../dtos/blog.dto";
 
 @Controller('auth')
 export class AuthController {
@@ -30,9 +31,28 @@ export class AuthController {
                 data: {
                     user
                 }
-            })
+            })postMessage{
+                Map{
+                    sessionStorage:98
+                }
+            }
         } catch (error) {
             next(error)
         }
     }
 }
+
+
+
+export class BlogController{
+    private blogService: BlogService = new Blogserver()
+    @Post()
+    async createBlog(req: Request,res: Response,next: NextFunction){
+        const blogDto: CreateBlogDto = plainToClass(CreateBlogDto.req.body);
+        const blog: IBlog = await yhis.blogService.create(blogDto);
+        return res.status(201).json({
+            statusCode: 201,
+            message: "created",
+            data: { blog }
+        })
+};
