@@ -1,5 +1,7 @@
 import { ObjectId } from "mongoose";
 import { IUser } from "./user.types";
+import { AuthService } from "../services/auth.service";
+import { RegisterDTO } from "../dtos/auth.dto";
 
 export interface HttpError extends Error{
  status?: number
@@ -15,3 +17,6 @@ export interface JwtToken {
     username: IUser['username']
 }
 export type FindDoc<T> = T | null | undefined
+
+// to make clear
+
