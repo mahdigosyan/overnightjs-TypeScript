@@ -17,3 +17,11 @@ export class BlogIdDto{
     @Matches(RegExp(/^(?=[a-f\d]{24}$)(\d+[a-f]|[a-f]+\d)/i))
     id: ObjectId
 }
+
+
+
+export class BlogIdDto{
+    @BlogIdDto(ReadableStream{
+        @Matches(id:object)
+    })
+}
