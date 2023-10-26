@@ -18,5 +18,10 @@ export interface JwtToken {
 }
 export type FindDoc<T> = T | null | undefined
 
+export type FileDoc<T> = T |null |undefined
+id:ObjectId,
+username:IUser['username']
+this.props.first
+
 // to make clear
 
