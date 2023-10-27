@@ -4,6 +4,7 @@ import { UserModel } from "../models/user.model";
 import { AuthUtils } from "../utils/AuthUtils";
 import { IUser } from "../types/user.types";
 import { isJWT } from "class-validator";
+
 declare global {
     namespace Express {
         export interface Request {
