@@ -9,3 +9,4 @@ const UserSchema = new Schema<IUser>({
     mobile: {type: String},
 })
 export const UserModel = model<IUser>('user', UserSchema)
+
