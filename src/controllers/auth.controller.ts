@@ -49,7 +49,7 @@ export class BlogController{
     @Post()
     async createBlog(req: Request,res: Response,next: NextFunction){
         const blogDto: CreateBlogDto = plainToClass(CreateBlogDto.req.body);
-        const blog: IBlog = await yhis.blogService.create(blogDto);
+        const blog: IBlog = await this.blogService.create(blogDto);
         return res.status(201).json({
             statusCode: 201,
             message: "created",
